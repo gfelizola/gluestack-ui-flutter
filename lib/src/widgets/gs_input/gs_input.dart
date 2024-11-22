@@ -315,7 +315,9 @@ class _GSInputState extends State<GSInput> {
                           ? 10 + widget.prefixText!.length * 8
                           : widget.prefixIcon != null
                               ? 50
-                              : 15,
+                              : widget.variant == GSInputVariants.underlined
+                                  ? 0
+                                  : 15,
                       top: 10,
                       child: Text(widget.hintText!,
                           style: widget.hintStyle ??
